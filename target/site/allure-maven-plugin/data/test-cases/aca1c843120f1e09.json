@@ -1,0 +1,56 @@
+{
+  "uid" : "aca1c843120f1e09",
+  "name" : "loginUserReturnSuccess",
+  "fullName" : "diplom_api.LoginUserApiTest.loginUserReturnSuccess",
+  "historyId" : "1819e6db21ffba3464e4baa5ae838360",
+  "time" : {
+    "start" : 1660510032344,
+    "stop" : 1660510033705,
+    "duration" : 1361
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "diplom_api"
+  }, {
+    "name" : "testClass",
+    "value" : "diplom_api.LoginUserApiTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "loginUserReturnSuccess"
+  }, {
+    "name" : "suite",
+    "value" : "diplom_api.LoginUserApiTest"
+  }, {
+    "name" : "host",
+    "value" : "Evgenijs-MacBook-Pro.local"
+  }, {
+    "name" : "thread",
+    "value" : "58029@Evgenijs-MacBook-Pro.local.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "aca1c843120f1e09.json",
+  "parameterValues" : [ ]
+}

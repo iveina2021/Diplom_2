@@ -1,0 +1,4 @@
+diplom_api/helper/TestUtils.class
+diplom_api/serialization/TestIngredients.class
+diplom_api/model/Ingredient.class
+diplom_api/helper/UserRequestTestHelper.class

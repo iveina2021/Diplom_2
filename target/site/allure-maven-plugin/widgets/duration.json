@@ -1,0 +1,161 @@
+[ {
+  "uid" : "edd3fe09457b06c",
+  "name" : "loginUserWithIncorrectEmailReturnError",
+  "time" : {
+    "start" : 1660510035124,
+    "stop" : 1660510036505,
+    "duration" : 1381
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e7be39742fd92e86",
+  "name" : "createUserWithoutPasswordReturnError",
+  "time" : {
+    "start" : 1660510019831,
+    "stop" : 1660510020453,
+    "duration" : 622
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "78e108e94e4b289a",
+  "name" : "createUniqueUserReturnSuccess",
+  "time" : {
+    "start" : 1660510010725,
+    "stop" : 1660510019040,
+    "duration" : 8315
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3089b484769da70d",
+  "name" : "createUserWithoutNameReturnError",
+  "time" : {
+    "start" : 1660510020457,
+    "stop" : 1660510021015,
+    "duration" : 558
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a24dc75f821276b3",
+  "name" : "getOrdersForUserWithoutAuthorization",
+  "time" : {
+    "start" : 1660510022410,
+    "stop" : 1660510022961,
+    "duration" : 551
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "aca1c843120f1e09",
+  "name" : "loginUserReturnSuccess",
+  "time" : {
+    "start" : 1660510032344,
+    "stop" : 1660510033705,
+    "duration" : 1361
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "66e2e88ea4bf31c8",
+  "name" : "createOrderWithIncorrectHash",
+  "time" : {
+    "start" : 1660510027264,
+    "stop" : 1660510029013,
+    "duration" : 1749
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a66fb6200fb066a1",
+  "name" : "getOrdersForUserWithAuthorization",
+  "time" : {
+    "start" : 1660510022964,
+    "stop" : 1660510024567,
+    "duration" : 1603
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "270de736993d7401",
+  "name" : "updateUserProfileWithAuthorization",
+  "time" : {
+    "start" : 1660510030382,
+    "stop" : 1660510031792,
+    "duration" : 1410
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "426cfd14dd0bc8c6",
+  "name" : "createOrderWithoutIngredients",
+  "time" : {
+    "start" : 1660510029019,
+    "stop" : 1660510030365,
+    "duration" : 1346
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3ad3e6f328e38acb",
+  "name" : "createOrderWithAuthorizationAndIngredientsReturnSuccess",
+  "time" : {
+    "start" : 1660510024613,
+    "stop" : 1660510027240,
+    "duration" : 2627
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "247b98b7baf18c85",
+  "name" : "createOrderWithoutAuthorizationReturnError",
+  "time" : {
+    "start" : 1660510027253,
+    "stop" : 1660510027254,
+    "duration" : 1
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "3e36342bda6b00d1",
+  "name" : "updateUserProfileWithoutAuthorization",
+  "time" : {
+    "start" : 1660510031794,
+    "stop" : 1660510032341,
+    "duration" : 547
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c1586bcd12b888ad",
+  "name" : "loginUserWithIncorrectPasswordReturnError",
+  "time" : {
+    "start" : 1660510033708,
+    "stop" : 1660510035120,
+    "duration" : 1412
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f1f55ff08c847498",
+  "name" : "createTwoIdenticalUsersReturnError",
+  "time" : {
+    "start" : 1660510021017,
+    "stop" : 1660510022397,
+    "duration" : 1380
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "784957c3fcbffa07",
+  "name" : "createUserWithoutEmailReturnError",
+  "time" : {
+    "start" : 1660510019221,
+    "stop" : 1660510019827,
+    "duration" : 606
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

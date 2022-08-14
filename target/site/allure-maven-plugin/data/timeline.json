@@ -1,0 +1,221 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "Evgenijs-MacBook-Pro.local",
+    "children" : [ {
+      "name" : "58029@Evgenijs-MacBook-Pro.local.main(1)",
+      "children" : [ {
+        "name" : "loginUserWithIncorrectEmailReturnError",
+        "uid" : "edd3fe09457b06c",
+        "parentUid" : "65af818f9263b314fe59870d1d529543",
+        "status" : "passed",
+        "time" : {
+          "start" : 1660510035124,
+          "stop" : 1660510036505,
+          "duration" : 1381
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "createUserWithoutPasswordReturnError",
+        "uid" : "e7be39742fd92e86",
+        "parentUid" : "65af818f9263b314fe59870d1d529543",
+        "status" : "passed",
+        "time" : {
+          "start" : 1660510019831,
+          "stop" : 1660510020453,
+          "duration" : 622
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "createUniqueUserReturnSuccess",
+        "uid" : "78e108e94e4b289a",
+        "parentUid" : "65af818f9263b314fe59870d1d529543",
+        "status" : "passed",
+        "time" : {
+          "start" : 1660510010725,
+          "stop" : 1660510019040,
+          "duration" : 8315
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "createUserWithoutNameReturnError",
+        "uid" : "3089b484769da70d",
+        "parentUid" : "65af818f9263b314fe59870d1d529543",
+        "status" : "passed",
+        "time" : {
+          "start" : 1660510020457,
+          "stop" : 1660510021015,
+          "duration" : 558
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "getOrdersForUserWithoutAuthorization",
+        "uid" : "a24dc75f821276b3",
+        "parentUid" : "65af818f9263b314fe59870d1d529543",
+        "status" : "passed",
+        "time" : {
+          "start" : 1660510022410,
+          "stop" : 1660510022961,
+          "duration" : 551
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "loginUserReturnSuccess",
+        "uid" : "aca1c843120f1e09",
+        "parentUid" : "65af818f9263b314fe59870d1d529543",
+        "status" : "passed",
+        "time" : {
+          "start" : 1660510032344,
+          "stop" : 1660510033705,
+          "duration" : 1361
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "createOrderWithIncorrectHash",
+        "uid" : "66e2e88ea4bf31c8",
+        "parentUid" : "65af818f9263b314fe59870d1d529543",
+        "status" : "passed",
+        "time" : {
+          "start" : 1660510027264,
+          "stop" : 1660510029013,
+          "duration" : 1749
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "getOrdersForUserWithAuthorization",
+        "uid" : "a66fb6200fb066a1",
+        "parentUid" : "65af818f9263b314fe59870d1d529543",
+        "status" : "passed",
+        "time" : {
+          "start" : 1660510022964,
+          "stop" : 1660510024567,
+          "duration" : 1603
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "updateUserProfileWithAuthorization",
+        "uid" : "270de736993d7401",
+        "parentUid" : "65af818f9263b314fe59870d1d529543",
+        "status" : "passed",
+        "time" : {
+          "start" : 1660510030382,
+          "stop" : 1660510031792,
+          "duration" : 1410
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "createOrderWithoutIngredients",
+        "uid" : "426cfd14dd0bc8c6",
+        "parentUid" : "65af818f9263b314fe59870d1d529543",
+        "status" : "passed",
+        "time" : {
+          "start" : 1660510029019,
+          "stop" : 1660510030365,
+          "duration" : 1346
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "createOrderWithAuthorizationAndIngredientsReturnSuccess",
+        "uid" : "3ad3e6f328e38acb",
+        "parentUid" : "65af818f9263b314fe59870d1d529543",
+        "status" : "passed",
+        "time" : {
+          "start" : 1660510024613,
+          "stop" : 1660510027240,
+          "duration" : 2627
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "createOrderWithoutAuthorizationReturnError",
+        "uid" : "247b98b7baf18c85",
+        "parentUid" : "65af818f9263b314fe59870d1d529543",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1660510027253,
+          "stop" : 1660510027254,
+          "duration" : 1
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "updateUserProfileWithoutAuthorization",
+        "uid" : "3e36342bda6b00d1",
+        "parentUid" : "65af818f9263b314fe59870d1d529543",
+        "status" : "passed",
+        "time" : {
+          "start" : 1660510031794,
+          "stop" : 1660510032341,
+          "duration" : 547
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "loginUserWithIncorrectPasswordReturnError",
+        "uid" : "c1586bcd12b888ad",
+        "parentUid" : "65af818f9263b314fe59870d1d529543",
+        "status" : "passed",
+        "time" : {
+          "start" : 1660510033708,
+          "stop" : 1660510035120,
+          "duration" : 1412
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "createTwoIdenticalUsersReturnError",
+        "uid" : "f1f55ff08c847498",
+        "parentUid" : "65af818f9263b314fe59870d1d529543",
+        "status" : "passed",
+        "time" : {
+          "start" : 1660510021017,
+          "stop" : 1660510022397,
+          "duration" : 1380
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "createUserWithoutEmailReturnError",
+        "uid" : "784957c3fcbffa07",
+        "parentUid" : "65af818f9263b314fe59870d1d529543",
+        "status" : "passed",
+        "time" : {
+          "start" : 1660510019221,
+          "stop" : 1660510019827,
+          "duration" : 606
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "65af818f9263b314fe59870d1d529543"
+    } ],
+    "uid" : "98d5055977f18978aeb0fa72fc35acb3"
+  } ]
+}
