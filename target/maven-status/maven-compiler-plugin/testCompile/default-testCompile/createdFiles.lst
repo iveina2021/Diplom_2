@@ -1,0 +1,5 @@
+diplom_api/GetUserOrdersApiTest.class
+diplom_api/UpdateUserProfileApiTest.class
+diplom_api/CreateUserApiTest.class
+diplom_api/CreateOrderApiTest.class
+diplom_api/LoginUserApiTest.class
