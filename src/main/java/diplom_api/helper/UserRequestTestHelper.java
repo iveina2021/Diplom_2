@@ -1,5 +1,6 @@
 package diplom_api.helper;
 
+import diplom_api.serialization.TestIngredients;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
@@ -36,7 +37,7 @@ public class UserRequestTestHelper {
                 .post(LOGIN_URL);
     }
 
-    public static Response createOrderRequest(Object body) {
+    public static Response createOrderRequest(TestIngredients body) {
         return given()
                 .spec(buildSpecWithoutAuthorization())
                 .and()
