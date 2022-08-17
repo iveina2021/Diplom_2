@@ -9,6 +9,11 @@ import static io.restassured.RestAssured.given;
 public class UserRequestTestHelper {
 
     private static final String STELLAR_BURGERS_URL = "https://stellarburgers.nomoreparties.site";
+    private static final String REGISTER_URL = "/api/auth/register";
+    private static final String LOGIN_URL = "/api/auth/login";
+    private static final String ORDERS_URL = "/api/orders";
+    private static final String AUTH_USER_URL = "/api/auth/user";
+    private static final String INGREDIENTS_URL = "/api/ingredients";
 
     public static Response createUserRequest(String json) {
         return given()
@@ -16,7 +21,7 @@ public class UserRequestTestHelper {
                 .and()
                 .body(json)
                 .when()
-                .post("/api/auth/register");
+                .post(REGISTER_URL);
     }
 
     public static Response loginUserRequest(String json) {
@@ -25,7 +30,7 @@ public class UserRequestTestHelper {
                 .and()
                 .body(json)
                 .when()
-                .post("/api/auth/login");
+                .post(LOGIN_URL);
     }
 
     public static Response createOrderRequest(Object body) {
@@ -34,7 +39,7 @@ public class UserRequestTestHelper {
                 .and()
                 .body(body)
                 .when()
-                .post("/api/orders");
+                .post(ORDERS_URL);
     }
 
     public static Response updateUserProfileRequest(String json, String accessToken) {
@@ -44,7 +49,7 @@ public class UserRequestTestHelper {
                 .and()
                 .body(json)
                 .when()
-                .patch("/api/auth/user");
+                .patch(AUTH_USER_URL);
     }
 
     public static Response updateUserProfileRequestWithoutAuthorization(String json) {
@@ -53,14 +58,14 @@ public class UserRequestTestHelper {
                 .and()
                 .body(json)
                 .when()
-                .patch("/api/auth/user");
+                .patch(AUTH_USER_URL);
     }
 
     public static Response getIngredients() {
         return given()
                 .spec(buildSpec())
                 .when()
-                .get("/api/ingredients");
+                .get(INGREDIENTS_URL);
     }
 
     public static Response getUserOrdersRequest(String accessToken) {
@@ -68,14 +73,14 @@ public class UserRequestTestHelper {
                 .spec(buildSpec())
                 .header("Authorization", accessToken)
                 .when()
-                .get("/api/orders");
+                .get(ORDERS_URL);
     }
 
     public static Response getUserOrdersRequestWithoutAuthorization() {
         return given()
                 .spec(buildSpec())
                 .when()
-                .get("/api/orders");
+                .get(ORDERS_URL);
     }
 
 
@@ -84,7 +89,7 @@ public class UserRequestTestHelper {
                 .spec(buildSpec())
                 .header("Authorization", accessToken)
                 .when()
-                .delete("/api/auth/user");
+                .delete(AUTH_USER_URL);
     }
 
     private static RequestSpecification buildSpec() {
