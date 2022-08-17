@@ -93,18 +93,19 @@ public class UserRequestTestHelper {
                 .delete(AUTH_USER_URL);
     }
 
-    private static RequestSpecification buildSpecWithoutAuthorization() {
+    private static RequestSpecBuilder createRequestSpecificationBuilder() {
         return new RequestSpecBuilder()
                 .addHeader("Content-type", "application/json")
-                .setBaseUri(STELLAR_BURGERS_URL)
-                .build();
+                .setBaseUri(STELLAR_BURGERS_URL);
+    }
+
+    private static RequestSpecification buildSpecWithoutAuthorization() {
+        return createRequestSpecificationBuilder().build();
     }
 
     private static RequestSpecification buildSpecWithAuthorization(String accessToken) {
-        return new RequestSpecBuilder()
-                .addHeader("Content-type", "application/json")
+        return createRequestSpecificationBuilder()
                 .addHeader("Authorization", accessToken)
-                .setBaseUri(STELLAR_BURGERS_URL)
                 .build();
     }
 }

@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: diplom_api.CreateUserApiTest
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.923 s - in diplom_api.CreateUserApiTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.397 s - in diplom_api.CreateUserApiTest
