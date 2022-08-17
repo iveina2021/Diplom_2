@@ -1,20 +1,32 @@
 package diplom_api.helper;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.UUID;
 
 public class TestUtils {
 
-    public static final String PASSWORD = "1999191";
-    public static final String NAME = "TED";
-    public static String EMAIL = UUID.randomUUID() + "iveina!!!!!!!!@mail.ru";
-    public static String STELLAR_BURGERS_URL = "https://stellarburgers.nomoreparties.site";
+    public static final String PASSWORD = UUID.randomUUID() + "_password";
+    public static final String NAME = UUID.randomUUID() + "_name";
+    public static String EMAIL = UUID.randomUUID() + "@yandex.ru";
 
-    public static String prepareCreateUserRequest(String email, String password, String name) {
-        return "{\"email\": \"" + email + "\", \"password\": \"" + password + "\", \"name\": \"" + name + "\"}";
+    public static Map<String, String> prepareCreateUserRequest(String email, String password, String name) {
+        Map<String, String> map = new HashMap<>();
+
+        map.put("email", email);
+        map.put("password", password);
+        map.put("name", name);
+
+        return map;
     }
 
-    public static String prepareEmailPasswordRequest(String email, String password) {
-        return "{\"email\": \"" + email + "\", \"password\": \"" + password + "\"}";
+    public static Map<String, String> prepareEmailPasswordRequest(String email, String password) {
+        Map<String, String> map = new HashMap<>();
+
+        map.put("email", email);
+        map.put("password", password);
+
+        return map;
     }
 }
 
