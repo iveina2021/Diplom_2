@@ -11,6 +11,7 @@ import static io.restassured.RestAssured.given;
 public class UserRequestTestHelper {
 
     private static final String STELLAR_BURGERS_URL = "https://stellarburgers.nomoreparties.site";
+
     private static final String REGISTER_URL = "/api/auth/register";
     private static final String LOGIN_URL = "/api/auth/login";
     private static final String ORDERS_URL = "/api/orders";
@@ -19,7 +20,7 @@ public class UserRequestTestHelper {
 
     public static Response createUserRequest(Map<String, String> body) {
         return given()
-                .spec(buildSpec())
+                .spec(buildSpecWithoutAuthorization())
                 .and()
                 .body(body)
                 .when()
@@ -28,7 +29,7 @@ public class UserRequestTestHelper {
 
     public static Response loginUserRequest(Map<String, String> body) {
         return given()
-                .spec(buildSpec())
+                .spec(buildSpecWithoutAuthorization())
                 .and()
                 .body(body)
                 .when()
@@ -37,7 +38,7 @@ public class UserRequestTestHelper {
 
     public static Response createOrderRequest(Object body) {
         return given()
-                .spec(buildSpec())
+                .spec(buildSpecWithoutAuthorization())
                 .and()
                 .body(body)
                 .when()
@@ -46,8 +47,7 @@ public class UserRequestTestHelper {
 
     public static Response updateUserProfileRequest(Map<String, String> body, String accessToken) {
         return given()
-                .spec(buildSpec())
-                .header("Authorization", accessToken)
+                .spec(buildSpecWithAuthorization(accessToken))
                 .and()
                 .body(body)
                 .when()
@@ -56,7 +56,7 @@ public class UserRequestTestHelper {
 
     public static Response updateUserProfileRequestWithoutAuthorization(Map<String, String> body) {
         return given()
-                .spec(buildSpec())
+                .spec(buildSpecWithoutAuthorization())
                 .and()
                 .body(body)
                 .when()
@@ -65,22 +65,21 @@ public class UserRequestTestHelper {
 
     public static Response getIngredients() {
         return given()
-                .spec(buildSpec())
+                .spec(buildSpecWithoutAuthorization())
                 .when()
                 .get(INGREDIENTS_URL);
     }
 
     public static Response getUserOrdersRequest(String accessToken) {
         return given()
-                .spec(buildSpec())
-                .header("Authorization", accessToken)
+                .spec(buildSpecWithAuthorization(accessToken))
                 .when()
                 .get(ORDERS_URL);
     }
 
     public static Response getUserOrdersRequestWithoutAuthorization() {
         return given()
-                .spec(buildSpec())
+                .spec(buildSpecWithoutAuthorization())
                 .when()
                 .get(ORDERS_URL);
     }
@@ -88,15 +87,22 @@ public class UserRequestTestHelper {
 
     public static Response deleteUser(String accessToken) {
         return given()
-                .spec(buildSpec())
-                .header("Authorization", accessToken)
+                .spec(buildSpecWithAuthorization(accessToken))
                 .when()
                 .delete(AUTH_USER_URL);
     }
 
-    private static RequestSpecification buildSpec() {
+    private static RequestSpecification buildSpecWithoutAuthorization() {
         return new RequestSpecBuilder()
                 .addHeader("Content-type", "application/json")
+                .setBaseUri(STELLAR_BURGERS_URL)
+                .build();
+    }
+
+    private static RequestSpecification buildSpecWithAuthorization(String accessToken) {
+        return new RequestSpecBuilder()
+                .addHeader("Content-type", "application/json")
+                .addHeader("Authorization", accessToken)
                 .setBaseUri(STELLAR_BURGERS_URL)
                 .build();
     }
