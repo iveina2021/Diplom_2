@@ -1,10 +1,8 @@
 package diplom_api;
 
 import diplom_api.helper.UserRequestTestHelper;
-import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 
 import static diplom_api.helper.TestUtils.*;
@@ -14,11 +12,6 @@ import static org.hamcrest.Matchers.equalTo;
 public class GetUserOrdersApiTest {
 
     private String accessToken;
-
-    @Before
-    public void setUp() {
-        RestAssured.baseURI = STELLAR_BURGERS_URL;
-    }
 
     @Test
     public void getOrdersForUserWithAuthorization() {

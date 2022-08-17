@@ -1,7 +1,6 @@
 package diplom_api;
 
 import diplom_api.helper.UserRequestTestHelper;
-import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.junit.After;
 import org.junit.Before;
@@ -17,7 +16,6 @@ public class LoginUserApiTest {
 
     @Before
     public void setUp() {
-        RestAssured.baseURI = STELLAR_BURGERS_URL;
         UserRequestTestHelper.createUserRequest(prepareCreateUserRequest(EMAIL, PASSWORD, NAME))
                 .then()
                 .statusCode(200)

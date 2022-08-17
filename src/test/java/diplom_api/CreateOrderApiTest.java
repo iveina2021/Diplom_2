@@ -3,10 +3,8 @@ package diplom_api;
 import diplom_api.helper.UserRequestTestHelper;
 import diplom_api.model.Ingredient;
 import diplom_api.serialization.TestIngredients;
-import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.junit.After;
-import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 
@@ -20,11 +18,6 @@ import static org.hamcrest.Matchers.equalTo;
 public class CreateOrderApiTest {
 
     private String accessToken;
-
-    @Before
-    public void setUp() {
-        RestAssured.baseURI = STELLAR_BURGERS_URL;
-    }
 
     @Test
     public void createOrderWithAuthorizationAndIngredientsReturnSuccess() {

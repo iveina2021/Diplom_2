@@ -1,14 +1,18 @@
 package diplom_api.helper;
 
+import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
 
 import static io.restassured.RestAssured.given;
 
 public class UserRequestTestHelper {
 
+    private static final String STELLAR_BURGERS_URL = "https://stellarburgers.nomoreparties.site";
+
     public static Response createUserRequest(String json) {
         return given()
-                .header("Content-type", "application/json")
+                .spec(buildSpec())
                 .and()
                 .body(json)
                 .when()
@@ -17,7 +21,7 @@ public class UserRequestTestHelper {
 
     public static Response loginUserRequest(String json) {
         return given()
-                .header("Content-type", "application/json")
+                .spec(buildSpec())
                 .and()
                 .body(json)
                 .when()
@@ -26,7 +30,7 @@ public class UserRequestTestHelper {
 
     public static Response createOrderRequest(Object body) {
         return given()
-                .header("Content-type", "application/json")
+                .spec(buildSpec())
                 .and()
                 .body(body)
                 .when()
@@ -35,7 +39,7 @@ public class UserRequestTestHelper {
 
     public static Response updateUserProfileRequest(String json, String accessToken) {
         return given()
-                .header("Content-type", "application/json")
+                .spec(buildSpec())
                 .header("Authorization", accessToken)
                 .and()
                 .body(json)
@@ -45,7 +49,7 @@ public class UserRequestTestHelper {
 
     public static Response updateUserProfileRequestWithoutAuthorization(String json) {
         return given()
-                .header("Content-type", "application/json")
+                .spec(buildSpec())
                 .and()
                 .body(json)
                 .when()
@@ -54,14 +58,14 @@ public class UserRequestTestHelper {
 
     public static Response getIngredients() {
         return given()
-                .header("Content-type", "application/json")
+                .spec(buildSpec())
                 .when()
                 .get("/api/ingredients");
     }
 
     public static Response getUserOrdersRequest(String accessToken) {
         return given()
-                .header("Content-type", "application/json")
+                .spec(buildSpec())
                 .header("Authorization", accessToken)
                 .when()
                 .get("/api/orders");
@@ -69,7 +73,7 @@ public class UserRequestTestHelper {
 
     public static Response getUserOrdersRequestWithoutAuthorization() {
         return given()
-                .header("Content-type", "application/json")
+                .spec(buildSpec())
                 .when()
                 .get("/api/orders");
     }
@@ -77,10 +81,17 @@ public class UserRequestTestHelper {
 
     public static Response deleteUser(String accessToken) {
         return given()
-                .header("Content-type", "application/json")
+                .spec(buildSpec())
                 .header("Authorization", accessToken)
                 .when()
                 .delete("/api/auth/user");
+    }
+
+    private static RequestSpecification buildSpec() {
+        return new RequestSpecBuilder()
+                .addHeader("Content-type", "application/json")
+                .setBaseUri(STELLAR_BURGERS_URL)
+                .build();
     }
 }
 
